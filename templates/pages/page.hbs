@@ -1,0 +1,15 @@
+<h3>Partials</h3>
+<hr>
+
+<!--#compose-->
+{{#compose cwd="templates/partials" src="*.hbs"}}
+    <p>Title: {{@title}}</p>
+    <!--\{{{@content}}} start-->
+    {{{@content}}}
+    <!--\{{{@content}}} end-->
+
+    <!--Test logging of @content-->
+    {{log @content}}
+    <hr>
+{{/compose}}
+<!--/compose-->
